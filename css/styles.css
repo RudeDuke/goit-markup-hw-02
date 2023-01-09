@@ -1,47 +1,25 @@
 /* ============================================================== CSS-VARIABLES ==================================================================== */
 :root {
   --main-text-color: #434455;
-  --main-titles--hero-footer-bg--logo-dark-part-color: #2e2f42;
-  --main-bg--hero-text--button-hover-color: #ffffff;
+  --main-titles-color: #2e2f42;
+  --main-background-color: #ffffff;
   --accent-color: #404bbf;
 
-  --logo-invariable-part--button-titles-color: #4d5ae5;
-  --logo-light-part--dark-sections-color: #f4f4fd;
+  --logo-ivariable-part-color: #4d5ae5;
+  --logo-light-part-color: #f4f4fd;
+  --logo-dark-part-color: #2e2f42;
 
-  --button-bg--footer-text-color: #e7e9fc;
+  --hero-titles-color: #ffffff;
+
+  --buttons-titles-color: #4d5ae5;
+  --buttons-background-color: #e7e9fc;
+  --buttons-hover-color: #ffffff;
+
+  --dark-sections-color: #f4f4fd;
+  --hero-and-footer-background-color: #2e2f42;
+
+  --footer-text-color: #e7e9fc;
 }
-/* 
-_____________________________________________________________
-
-Alternative Way To Write CSS-Variables With The Same Colors:
-_____________________________________________________________
-:root {
-    --main-text-color: #434455;
-    --main-titles-color: #2e2f42;
-    --accent-color: #404bbf;
-
-    --logo-ivariable-part-color: #4d5ae5;
-    --logo-light-part-color: #f4f4fd;
-    --logo-dark-part-color: #2e2f42;
-
-    --hero-text-color: #ffffff;
-
-    --buttons-titles-color: #4d5ae5;
-    --buttons-background-color: #e7e9fc;
-    --buttons-hover-color: #ffffff;
-
-    --light-sections-color: #ffffff;
-    --dark-sections-color: #f4f4fd;
-
-    --hero-and-footer-background-color: #f4f4fd;
-    --footer-text-color: #e7e9fc;
-}
-__________________________________________________________________________________________________
-
-Мені здається, що такий запис є БІЛЬШ ЗРОЗУМІЛИМ ніж безкінечні "люля-кебаби".
-Проте, напевно, значно більша кількість змінних сильно уповільнює швидкість завантаження сторінок.
-__________________________________________________________________________________________________*/
-
 /* ==================================================== REMOVERS OF PREDEFINED TAG PROPERTIES =================================================== */
 .link {
   text-decoration: none;
@@ -57,6 +35,7 @@ body {
   /* font-size: 16px;                                                        ====> basic paragraph font-size, predefined by a browser by default */
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  background-color: var(--main-background-color);
 }
 /* ================================================================= COMPONENTS ================================================================== */
 
@@ -74,15 +53,15 @@ body {
 }
 
 .logo-invariable-part {
-  color: var(--logo-invariable-part--button-titles-color);
+  color: var(--logo-ivariable-part-color);
 }
 
 .logo-dark-part {
-  color: var(--main-titles--hero-footer-bg--logo-dark-part-color);
+  color: var(--logo-dark-part-color);
 }
 
 .logo-light-part {
-  color: var(--logo-light-part--dark-sections-color);
+  color: var(--logo-light-part-color);
 }
 
 /* -------- [BUTTONS] -------- */
@@ -92,20 +71,21 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--logo-invariable-part--button-titles-color);
+  color: var(--buttons-titles-color);
+  background-color: var(--buttons-background-color);
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  color: var(--main-bg--hero-text--button-hover-color);
+  color: var(--buttons-hover-color);
   background-color: var(--accent-color);
 }
 /* ===================================================================== HEADER ====================================================================== */
 .menu-link {
   font-weight: 500;
   line-height: 1.5;
-  color: var(--main-titles--hero-footer-bg--logo-dark-part-color);
+  color: var(--main-titles-color);
 }
 
 .menu-link:hover,
@@ -114,6 +94,7 @@ body {
 }
 
 .contact-link {
+  font-style: normal;
   line-height: 1.5;
   color: var(--main-text-color);
 }
@@ -125,7 +106,7 @@ body {
 /* ================================================================== HERO SECTION =================================================================== */
 .hero,
 .footer {
-  background-color: var(--main-titles--hero-footer-bg--logo-dark-part-color);
+  background-color: var(--hero-and-footer-background-color);
 }
 
 .hero-title {
@@ -133,7 +114,7 @@ body {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  color: var(--main-bg--hero-text--button-hover-color);
+  color: var(--hero-titles-color);
 }
 
 .hero-button {
@@ -141,8 +122,8 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  background-color: #4d5ae5;
-  color: var(--main-bg--hero-text--button-hover-color);
+  color: var(--hero-titles-color);
+  background-color: var(--buttons-titles-color);
   cursor: pointer;
 }
 
@@ -156,15 +137,10 @@ body {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--main-titles--hero-footer-bg--logo-dark-part-color);
+  color: var(--main-titles-color);
 }
-
-.light-section {
-  background-color: var(--main-bg--hero-text--button-hover-color);
-}
-
 .dark-section {
-  background-color: var(--logo-light-part--dark-sections-color);
+  background-color: var(--dark-sections-color);
 }
 
 .visually-hidden {
@@ -187,7 +163,7 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--main-titles--rich-dark-bg--logo-dark-part-color);
+  color: var(--main-titles-color);
 }
 
 .advantage-description,
@@ -198,11 +174,11 @@ body {
 }
 
 .team-member-card {
-  background-color: var(--main-bg--hero-text--button-hover-color);
+  background-color: var(--main-background-color);
 }
 /* ====================================================================== FOOTER ======================================================================= */
 .footer-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--main-bg--hero-text--button-hover-color);
+  color: var(--footer-text-color);
 }
